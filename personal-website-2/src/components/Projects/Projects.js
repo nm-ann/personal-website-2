@@ -5,6 +5,7 @@ class Projects extends Component {
     render() {
         return(
             <div className="projects">
+                <label className="projects-title">Projects</label>
                 <div className="project-cards">
                     <ProjectCard
                         pic={"https://cdn.freebiesupply.com/logos/large/2x/react-1-logo-png-transparent.png"}

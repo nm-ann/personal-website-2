@@ -1,15 +1,16 @@
 import React, { Component } from 'react';
 import Console from './Console';
-import AboutInfo from './AboutInfo';
 
 class About extends Component {
     render() {
         return(
             <div className="about">
-                <label>I'm a Software Developer with experience in Java, Python, Javascript, HTML, and CSS.</label>
+                <label className="about-title">About</label>
                 <div className="about-content">
                     <Console />
-                    <AboutInfo />
+                    <div className="about-info">
+                        <p>I'm an NYC based computer science student, software developer, and designer, with experience in Java, Python, and Javascript.</p>
+                    </div>
                 </div>
             </div>
         );
