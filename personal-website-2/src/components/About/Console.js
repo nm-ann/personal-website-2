@@ -70,7 +70,7 @@ class Console extends Component {
                 </div>
                 <div className="about-console-body">
                     <div className="about-console-text">
-                        <form>
+                        <form autocomplete="off">
                             <label>> Header.color = </label>
                             <input type="text" placeholder="#333f56" name="headerColor" onKeyPress={this.handleKeyPress} /><br/><br/>
                             <label>> Header.text.color = </label> 

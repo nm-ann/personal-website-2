@@ -4,7 +4,8 @@ class Header extends Component {
     constructor() {
         super();
         this.state = {
-            scrollingLock: false
+            backgroundColor: 'rgba(0, 0, 0, ',
+            backgroundAlpha: 0
         }
 
         this.handleScroll = this.handleScroll.bind(this);
@@ -16,24 +17,20 @@ class Header extends Component {
 
     handleScroll() {
         if (window.scrollY > 50) {
-            console.log("should lock");
             this.setState({
-              scrollingLock: true
+              backgroundAlpha: 0.3
             });
           } else if (window.scrollY < 50) {
-            console.log("not locked" );
             this.setState({
-              scrollingLock: false
+              backgroundAlpha: 0
             });
           }
     }
 
     render() {
         return(
-            <div className="header">
-                <div className="header-title" style={{visibility: this.state.scrollingLock ? "hidden" : "visible"}}>
-                    Noam Annenberg
-                </div>
+            <div className="header" style={{background: this.state.backgroundColor + this.state.backgroundAlpha + ')'}}>
+                <label className="header-title">Noam Annenberg</label>
                 <div className="nav-links" ref="navLinks" style={{position: this.state.scrollingLock ? "fixed" : "relative"}}>
                     <a href="#" className="nav-link nav-link-about">About</a>
                     <a href="#" className="nav-link nav-link-projects">Projects</a>
