@@ -5,7 +5,8 @@
 
 /* Header */
 .header {
-  background: #333f56;
+  background: rgba(21, 24, 29, 0.8);
+  position: fixed;
   width: 100%;
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -14,10 +15,11 @@
   justify-content: center;
   align-items: center;
   font-family: 'Raleway', sans-serif;
+  z-index: 1;
 }
 
 .header-title {
-  color: white;
+  color: #FFC107;
   font-size: 20px;
   padding-bottom: 1rem;
 }
@@ -31,7 +33,7 @@
 }
 
 .nav-link {
-  color: #b2bbca;
+  color: rgb(228, 211, 161);
   text-decoration: none;
   margin-right: 5rem;
   margin-left: 5rem;
@@ -41,7 +43,7 @@
   position: relative;
 }
 .nav-link:hover {
-  color: white;
+  color: rgb(226, 192, 88);
 }
 .nav-link::before {
   content: '';
@@ -49,7 +51,7 @@
   width: 100%;
   bottom: 0;
   height: 2px;
-  background-color: white;
+  background-color: rgb(226, 192, 88);
   transform: scaleX(0);
   transform-origin: left;
   transition: 0.5s;
@@ -60,18 +62,20 @@
 
 /* About */
 .about {
-  background: #ffffff;
+  background: rgb(51, 59, 70);
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   font-family: 'Raleway', sans-serif;
   color: white;
+  padding-top: 7rem; 
   padding-bottom: 3rem;
+  z-index: 0;
 }
 .about-title {
   margin: 1rem;
-  color: #333f56;
+  color: white;
   font-size: 40px;
   text-decoration: underline;
   font-family: 'Raleway', sans-serif;
@@ -144,7 +148,7 @@
   position: relative;
   height: 100%;
   width: 100%;
-  color: black;
+  color: white;
   font-size: 40px;
   font-family: "Raleway", sans-serif;
 }
@@ -152,7 +156,7 @@
 
 /* Projects */
 .projects {
-  background: #818891;
+  background: rgb(228, 191, 80);
   height: 100%;
   width: 100%;
   padding: 2rem;
@@ -160,6 +164,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 
 .projects-title {
